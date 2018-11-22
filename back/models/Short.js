@@ -2,11 +2,9 @@ const mongoose = require('mongoose')
 
 const Short = mongoose.model('Short', {
   originalUrl: {
-    type: String,
-    unique: true,
-    index: true
+    type: String
   },
-  shortUrl: {
+  shortPath: {
     type: String,
     unique: true,
     index: true

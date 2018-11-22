@@ -1,15 +1,20 @@
 {
   "version": 2,
   "name": "chop-my-url",
+  "public": true,
   "alias": "chop",
   "builds": [
     { "src": "back/handlers/*.js", "use": "@now/node" },
-    { "src": "front/**", "use": "@now/static" },
+    { "src": "front/**", "use": "@now/static" }
   ],
   "routes": [
-    { "src": "/", "methods": ["GET"] , "dest": "/" },
-    { "src": "/about", "methods": ["GET"] ,"dest": "/" },
+    { "src": "/", "methods": ["GET"] , "dest": "front/index.html" },
+    { "src": "/about", "methods": ["GET"] ,"dest": "front/about.html" },
     { "src": "/", "methods": ["POST"] ,"dest": "back/handlers/chop.js" },
     { "src": "/([a-zA-Z0-9]{8})", "methods": ["GET"] ,"dest": "back/handlers/redirect.js" }
-  ]
+  ],
+  "env": {
+    "mongo_chop_user": "@mongo_chop_user",
+    "mongo_chop_pass": "@mongo_chop_pass"
+  }
 }

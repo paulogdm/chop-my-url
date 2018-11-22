@@ -16,7 +16,10 @@
   },
   "homepage": "https://github.com/paulogdm/chop-my-url#readme",
   "dependencies": {
-    "ava": "^0.25.0"
+    "koa": "^2.6.2",
+    "koa-body": "^4.0.4",
+    "mongoose": "^5.3.13",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "eslint": "^5.9.0",
