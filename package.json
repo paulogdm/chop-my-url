@@ -1,0 +1,32 @@
+{
+  "name": "chop-my-url",
+  "version": "0.0.1",
+  "description": "A tiny example showing how to use now v2.",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulogdm/chop-my-url.git"
+  },
+  "author": "paulogdm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulogdm/chop-my-url/issues"
+  },
+  "homepage": "https://github.com/paulogdm/chop-my-url#readme",
+  "dependencies": {
+    "koa": "^2.6.2",
+    "koa-body": "^4.0.4",
+    "mongoose": "^5.3.13",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
