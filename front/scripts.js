@@ -31,6 +31,16 @@ const updateCopyField = () => {
 
 const copy = async () => {
   if (LATEST_SHORT) {
+    const target = document.getElementById('output')
+
+    target.classList.add('animated')
+    target.classList.add('rubberBand')
+
+    window.setTimeout(() => {
+      target.classList.remove('animated')
+      target.classList.remove('rubberBand')
+    }, 1000)
+
     await navigator.clipboard.writeText(LATEST_SHORT)
   }
 }
