@@ -9,9 +9,9 @@
   ],
   "routes": [
     { "src": "/", "methods": ["GET"] , "dest": "front/index.html" },
-    { "src": "/about", "methods": ["GET"] ,"dest": "front/about.html" },
     { "src": "/", "methods": ["POST"] ,"dest": "back/handlers/chop.js" },
-    { "src": "/([a-zA-Z0-9]{8})", "methods": ["GET"] ,"dest": "back/handlers/redirect.js" }
+    { "src": "/([a-zA-Z0-9]{8})", "methods": ["GET"] ,"dest": "back/handlers/redirect.js" },
+    { "src": "/(*.js|*.css|favicon*)", "methods": ["GET"] ,"dest": "front/$1" }
   ],
   "env": {
     "mongo_chop_user": "@mongo_chop_user",
