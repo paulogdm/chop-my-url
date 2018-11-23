@@ -1,3 +1,6 @@
+/**
+ * This middleware is a central error handler for our app.
+ */
 const use = async (ctx, next) => {
   try {
     await next()

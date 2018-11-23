@@ -1,3 +1,6 @@
+/**
+ * This middleware benchmarks the response time of the server.
+ */
 module.exports = async (ctx, next) => {
   const start = Date.now()
   await next()

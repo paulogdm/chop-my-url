@@ -25,6 +25,7 @@ const insert = async (originalUrl) => {
   let exists
   let shortPath
   // this loop should not run in most cases...
+  // in case of collision, generate another uuid
   do {
     shortPath = uuid()
     exists = await getByShortPath(shortPath)

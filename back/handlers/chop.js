@@ -16,7 +16,11 @@ app.use(acceptedContentType)
 
 const main = async ctx => {
   const { originalUrl } = ctx.request.body
+  // mongo insert
   const { shortPath } = await shortActions.insert(originalUrl)
+  // ctx.request.origin may no be suited for all cases
+  // but here we glue the path with the origin url:
+  // eg: https://chop.now.sh + / + abcdefghij
   const shortUrl = `${ctx.request.origin}/${shortPath}`
   ctx.body = { originalUrl, shortUrl }
 }
