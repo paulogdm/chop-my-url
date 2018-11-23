@@ -11,7 +11,7 @@
     { "src": "/", "methods": ["GET"] , "dest": "front/index.html" },
     { "src": "/", "methods": ["POST"] ,"dest": "back/handlers/chop.js" },
     { "src": "/([a-zA-Z0-9]{8})", "methods": ["GET"] ,"dest": "back/handlers/redirect.js" },
-    { "src": "/(*.js|*.css|favicon*)", "methods": ["GET"] ,"dest": "front/$1" }
+    { "src": "/(.*(js|css|ico))", "methods": ["GET"] ,"dest": "front/$1" }
   ],
   "env": {
     "mongo_chop_user": "@mongo_chop_user",
