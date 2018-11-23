@@ -14,8 +14,14 @@ const notFound = async ctx => {
 }
 
 const redirect = async (ctx, originalUrl) => {
+  let location = originalUrl
+
+  if (!location.startsWith('https://') && !location.startsWith('http://')) {
+    location = `https://${location}`
+  }
+
   ctx.status = 301
-  ctx.redirect(originalUrl)
+  ctx.redirect(location)
   ctx.body = 'Redirecting...'
 }
 

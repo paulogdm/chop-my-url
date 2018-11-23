@@ -9,7 +9,7 @@ const dbpassword = process.env.mongo_chop_pass
 
 // Remember to add your own secrets!!!
 if (!dbuser || !dbpassword) {
-  throw new Error(`A user and password is required!`)
+  throw new Error(`A user and password is required! Got user:${dbuser} and password:${dbpassword}`)
 }
 
 // connecting to mongo

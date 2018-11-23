@@ -1,0 +1,38 @@
+
+/* Mobile First Media Queries */
+
+body {
+  font-family: 'Roboto Slab', serif;
+  display: grid;
+  height: 100vh;
+  margin: 0;
+  place-items: center center;
+  background-color: #f4f5f6;
+}
+
+.button-cover {
+  font-size: 1.4rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+h1, h6 {
+  text-align: center;
+}
+
+/* Larger than mobile screen */
+@media (min-width: 40.0rem) {
+
+}
+
+/* Larger than tablet screen */
+@media (min-width: 80.0rem) {
+
+}
+
+/* Larger than desktop screen */
+@media (min-width: 120.0rem) {
+
+}
