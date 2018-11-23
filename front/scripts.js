@@ -13,16 +13,20 @@ const send = async () => {
       },
       body: JSON.stringify({ originalUrl: input })
     })
-    const content = await rawResponse.json()
-    console.log(content)
-    LATEST_SHORT = 'https://zeit.co'
+    const { shortUrl } = await rawResponse.json()
+    LATEST_SHORT = shortUrl
   } catch (err) {
     console.error('🚑', `${err}`)
   }
+
+  updateCopyField()
 }
 
-const updateCopyField = async () => {
-
+const updateCopyField = () => {
+  if (LATEST_SHORT) {
+    const target = document.getElementById('output')
+    target.innerHTML = `<i class="far fa-copy"></i> ${LATEST_SHORT}`
+  }
 }
 
 const copy = async () => {
