@@ -2,6 +2,8 @@
 
 A shortener URL example deployed to [Now 2.0](https://now.sh/).
 
+Live demo: [chop.now.sh](https://chop.now.sh). The source and logs can be accessed by attaching `/_src` or `/_logs`, respectively.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on [Now](https://now.sh/).
