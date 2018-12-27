@@ -37,8 +37,9 @@ const send = async () => {
 const updateCopyField = () => {
   // if the variable exists and is different from undefined.
   if (LATEST_SHORT) {
-    const target = document.getElementById('output')
-    target.innerHTML = `<i class="far fa-copy"></i> ${LATEST_SHORT}`
+    const target = document.getElementById('output-url')
+    document.getElementById('output').classList.remove('hidden')
+    target.innerText = LATEST_SHORT
   }
 }
 
@@ -64,3 +65,13 @@ const copy = async () => {
     await navigator.clipboard.writeText(LATEST_SHORT)
   }
 }
+
+
+/**
+ * attach events on load
+ */
+window.addEventListener('load', () => {
+  // add events
+  document.getElementById('chop-it').addEventListener('click', send)
+  document.getElementById('output').addEventListener('click', copy)
+})

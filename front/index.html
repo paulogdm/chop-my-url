@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chop it!</title>
 
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -8,16 +10,17 @@
     <link rel="icon" href="/favicon-62.png" sizes="62x62" type="image/png">
     <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
 
-    <!-- FontAwesome -->
-    <script async src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
     <!-- Miligram CSS -->
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <!-- Chop it -->
+    <link rel="stylesheet" type="text/css" href="/styles.css"/>
+    <script src="/scripts.js" type="text/javascript"></script>
 
   </head>
 
@@ -26,16 +29,16 @@
       <h1>Chop My Url</h1>
       <h6>Shortener URL based on <a href="https://now.sh">Now 2</a></h6>
       <fieldset>
-        <input type="text" placeholder="..." id="input" style="background-color: white;">
-        <button class="button button-cover" onclick="send()">Chop!</button>
+        <input type="text" placeholder="..." id="input">
+        <button class="button button-cover" id="chop-it">Chop!</button>
       </fieldset>
       <fieldset class="overflow-allowed">
-        <button class="button button-clear button-cover" id="output" onclick="copy()"></button>
+        <button class="button button-clear button-cover hidden" id="output">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4H8c-1.1 0-1.99.9-1.99 2L6 21c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V11l-6-6zM8 21V7h6v5h5v9H8z"/></svg>
+          <span id="output-url"></span>
+        </button>
       </fieldset>
     </div>
   </body>
-
-  <link rel="stylesheet" type="text/css" href="/styles.css"/>
-  <script src="/scripts.js" type="text/javascript"></script>
 
 </html>
